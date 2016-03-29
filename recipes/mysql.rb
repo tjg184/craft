@@ -25,6 +25,7 @@ end
 # make there only 1 mysql instance
 link "/var/run/mysqld/mysqld.sock" do
   to "#{socket}"
+  ignore_failure true
 end
 
 mysql2_chef_gem 'default' do
